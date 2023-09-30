@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: jallaire
+    database: dev_sandbox
+    schema: sf1
+    tables:
+      - name: vw_account
