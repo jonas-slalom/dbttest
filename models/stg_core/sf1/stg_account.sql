@@ -4,8 +4,10 @@ with source as (
 renamed as (
 
 select 
+{{ dbt_utils.generate_surrogate_key(['ID', 'LASTMODIFIEDDATE']) }} AS ACCOUNT_KEY
 Id as ID,
-name as name
+name as name,
+LASTMODIFIEDDATE AS LAST_MODIFIED_DATE,
 MD_Source as MD_SOURCE
 from source
 )

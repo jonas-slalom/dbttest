@@ -3,6 +3,6 @@ version: 2
 sources:
   - name: sf1
     database: dev_sandbox
-    schema: sf1
+    schema: jallaire
     tables:
       - name: vw_account
