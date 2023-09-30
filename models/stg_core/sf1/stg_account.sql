@@ -9,3 +9,5 @@ name as name
 MD_Source as MD_SOURCE
 from source
 )
+
+select * from renamed

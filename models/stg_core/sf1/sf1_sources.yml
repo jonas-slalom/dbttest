@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: jallaire
+  - name: sf1
     database: dev_sandbox
     schema: sf1
     tables:
