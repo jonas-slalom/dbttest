@@ -5,7 +5,7 @@
         merge_exclude_columns=["md_insert_date"],        
         on_schema_change="append_new_columns",
         incremental_strategy="append",
-        tags = tags=["core","int"],
+        tags=["core","int"],
     )
 }}
 

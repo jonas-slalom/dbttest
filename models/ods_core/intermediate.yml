@@ -3,15 +3,26 @@ version: 2
 models:
   - name: int_sf1_account
     description: "An intermediate ODS model in incremental "
-    config:
-      contract:
-        enforced: true
     columns:
       - name: account_key
         data_type: text
-        constraints:
-          - type: not_null
         tests:
           - unique
-          - not_null
+          - not_null           
+          - dbt_constraints.primary_key
+      - name: ID
+        data_type: text
+        tests:
+          - not_null                                   
+      - name: LAST_MODIFIED_DATE
+        data_type: TIMESTAMP_NTZ
+      - name: MD_SOURCE
+        data_type: text
+      - name: MD_STG_LOADED_DATE
+        data_type: TIMESTAMP_NTZ
+      - name: Name
+        data_type: text
+      - name: MD_LOADED_DATE 
+        data_type: TIMESTAMP_NTZ
+
       

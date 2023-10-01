@@ -7,7 +7,7 @@
       unique_key='ACCOUNT_KEY',
       strategy='timestamp',
       updated_at='LAST_MODIFIED_DATE',
-      tags = tags=["core","int"],
+      tags=["core","int"],
     )
 }}
 

@@ -1,7 +1,7 @@
 
 {{
     config(
-        tags = tags=["core","staging"],   
+        tags=["core","staging"],   
     )
 }}
 
@@ -11,7 +11,7 @@ with source as (
 renamed as (
 
 select 
-{{ dbt_utils.generate_surrogate_key(['ID', 'LASTMODIFIEDDATE']) }} AS ACCOUNT_KEY,
+{{ dbt_utils.generate_surrogate_key(['ID', 'LASTMODIFIEDDATE']) }}::TEXT AS ACCOUNT_KEY,
 Id as ID,
 name as name,
 LASTMODIFIEDDATE AS LAST_MODIFIED_DATE,
@@ -20,4 +20,4 @@ md_insert_date AS MD_STG_LOADED_DATE
 from source
 )
 
-select * from renamed
+select DISTINCT * from renamed
