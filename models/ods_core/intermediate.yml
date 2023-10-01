@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_sf1_account
+    description: "An intermediate ODS model in incremental "
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: account_key
+        data_type: text
+        constraints:
+          - type: not_null
+        tests:
+          - unique
+          - not_null
+      
